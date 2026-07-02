@@ -1,7 +1,6 @@
 {
   "name": "laconic",
   "description": "Makes Claude reply like a human texting a trusted colleague on Slack — short, plain, answer-first — instead of writing essays. Ships a UserPromptSubmit hook that re-injects the style every turn so it never fades.",
-  "version": "0.1.0",
   "author": {
     "name": "Vijeth-Rai"
   },
