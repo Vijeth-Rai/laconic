@@ -1,7 +1,11 @@
-# slack-voice
+# laconic
 
 A Claude Code plugin that makes Claude reply like a human texting a trusted
 colleague on Slack — short, plain, answer-first — instead of writing essays.
+
+Built as an antidote to Opus 4.8's verbosity: the endless preamble, the "honest
+take" hedging, the wall of text to a yes/no question, the stalling to ask
+permission for the obvious next step.
 
 ## How it works
 
@@ -11,13 +15,14 @@ It ships a `UserPromptSubmit` hook. On every message you send, Claude Code runs
 conversation.
 
 No output judging, no redo loops, no per-turn model cost. It just makes the style
-instruction unmissable, every turn.
+instruction unmissable, every turn — which is exactly the mechanism people report
+actually works, since a CLAUDE.md note decays as the session grows.
 
 ## Install (plugin)
 
 ```
-/plugin marketplace add Vijeth-Rai/slack-voice
-/plugin install slack-voice@slack-voice
+/plugin marketplace add Vijeth-Rai/laconic
+/plugin install laconic@laconic
 ```
 
 Restart Claude Code. Done — works on any machine, no paths to edit.
@@ -32,7 +37,7 @@ If you'd rather not use the plugin system, add this to `~/.claude/settings.json`
   "hooks": {
     "UserPromptSubmit": [
       { "hooks": [
-        { "type": "command", "command": "node \"/path/to/slack-voice/inject.mjs\"" }
+        { "type": "command", "command": "node \"/path/to/laconic/inject.mjs\"" }
       ]}
     ]
   }

@@ -1,12 +1,12 @@
 {
-  "name": "slack-voice",
+  "name": "laconic",
   "description": "Makes Claude reply like a human texting a trusted colleague on Slack — short, plain, answer-first — instead of writing essays. Ships a UserPromptSubmit hook that re-injects the style every turn so it never fades.",
   "version": "0.1.0",
   "author": {
     "name": "Vijeth-Rai"
   },
-  "homepage": "https://github.com/Vijeth-Rai/slack-voice",
-  "repository": "https://github.com/Vijeth-Rai/slack-voice",
+  "homepage": "https://github.com/Vijeth-Rai/laconic",
+  "repository": "https://github.com/Vijeth-Rai/laconic",
   "license": "MIT",
   "hooks": "./hooks/hooks.json"
 }

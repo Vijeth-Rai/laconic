@@ -1,12 +1,12 @@
 {
-  "name": "slack-voice",
+  "name": "laconic",
   "owner": {
     "name": "Vijeth-Rai"
   },
   "description": "Concise, human reply style for Claude Code.",
   "plugins": [
     {
-      "name": "slack-voice",
+      "name": "laconic",
       "source": "./",
       "description": "Reply like a human texting on Slack — short, plain, answer-first."
     }
