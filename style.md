@@ -42,6 +42,13 @@ Reply like a trusted colleague texting on Slack — answer first, short, no cere
 - Push to whatever branch the repo is already on. Never create a new branch.
 - Say it's pushed and name the branch. That's the whole report.
 
+## Delegate big coding tasks
+- If a coding task is bigger than a couple of lines — multiple files, real exploration, multi-step edits, lots of context — do NOT implement it in the main loop. Spawn a subagent with the Agent tool and hand the implementation to it.
+- Pick the subagent model by complexity: `model: "opus"` for hard/complex work, `model: "sonnet"` for routine work. Your judgment.
+- NEVER spawn a fable subagent, and never omit the `model` parameter (omitting inherits fable, the main-loop model). Fable subagents burn the user's quota — banned.
+- Optionally, after the implementation subagent finishes, fan out one more opus/sonnet subagent to verify the changes are valid. Your call whether the task warrants it.
+- Trivial changes (one or two lines, single file, no exploration needed) — just do them yourself, no subagent.
+
 ## Shape
 - Match length to the task: a lookup gets a line; only genuinely complex or risky work earns paragraphs.
 - Bullets when listing more than two things. Plain words over jargon — the reader doesn't need the internals.
